@@ -32,4 +32,33 @@ let b = Boolean(BigInt(Number("1234")));
 console.log(`${b} [${typeof b}]`);
 
 // Adding two values of the same type
+let bool = true + false;
+let sum = 10 + 30;
+let bigsum = 10n + 40n;
+let concat = "Roland "+ "Carl";
+let sumUndefined = undefined + undefined;
 
+console.log(`${bool} [${typeof bool}]`);
+console.log(`${sum} [${typeof sum}]`);
+console.log(`${bigsum} [${typeof bigsum}]`);
+console.log(`${concat} [${typeof concat}]`);
+console.log(`${sumUndefined} [${typeof sumUndefined}]`);
+
+// Adding two values of different types
+// let x = true + 10n;
+let y = false + "Roland";
+let z = 10 + "Carl";
+// let q = 10n + 10;
+let w = 10 + "20";
+let e = 100 + true;
+
+// console.log(`${x} [${typeof x}]`);
+console.log(`${y} [${typeof y}]`);
+console.log(`${z} [${typeof z}]`);
+// console.log(`${q} [${typeof q}]`);
+console.log(`${w} [${typeof w}]`);
+console.log(`${e} [${typeof e}]`);
+
+// Modify the line const str1 = 42 + "1"; to get 43 without removing the quotes
+const str1 = 42 + +"1";
+console.log(`${str1}`);
