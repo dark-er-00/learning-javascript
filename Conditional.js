@@ -36,6 +36,10 @@ switch(choice){
         };
         
         contacts.push(contact);
+
+        for(let contact of contacts){
+            alert(`Name: ${contact[last].name}, Phone: ${contact[last].phone}, Email: ${contact[last].email}`);
+        }
         
         alert("Added successfully");
         break;
