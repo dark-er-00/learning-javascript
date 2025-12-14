@@ -128,29 +128,42 @@ let contacts = [{
 }];
 
 while(true){
-    console.log("[1] - Display the first contact");
-    console.log("[2] - Display the last contact");
-    console.log("[3] - Display all contacts");
-    console.log("[4] - Add a new contact");
-    console.log("[5] - Exit the program");
-    let choice = Number(prompt("Enter your choice: "));
+    let choice = Number(prompt("[1] - Display the first contact\n[2] - Display the last contact\n[3] - Display all contacts\n[4] - Add a new contact\n[5] - Exit the program\nEnter your choice: "));
 
     switch(choice){
         case 1:
-            alert(`Name: ${contacts[0].name}`)
+            alert(`Name: ${contacts[0].name}, Phone: ${contacts[0].phone}, Email: ${contacts[0].email}`);
             break;
 
         case 2:
+            let last = contacts.length - 1;
+            alert(`Name: ${contacts[last].name}, Phone: ${contacts[last].phone}, Email: ${contacts[last].email}`);
             break;
             
         case 3:
+            for(let contact of contacts){
+                alert(`Name: ${contact.name}, Phone: ${contact.phone}, Email: ${contact.email}`);
+            }
             break;
 
         case 4:
+            let Name = prompt("Enter a name: ");
+            let Phone = prompt("Enter a phone number: ");
+            let Email = prompt("Enter an email: ");
+            
+            let contact = {
+                name: Name,
+                phone: Phone,
+                email: Email
+            };
+            
+            contacts.push(contact);
+
+            alert("Added successfully!");
             break;
 
         case 5:
-            break;
+            return;
 
         default:
             console.log("Invalid choice")
