@@ -143,7 +143,7 @@ function addNewContact(contacts, name, phone, email){
 
 //
 
-let contacts = [{
+let contacts1 = [{
     name: "Maxwell Wright",
     phone: "(0191) 719 6495",
     email: "Curabitur.egestas.nunc@nonummyac.co.uk"
@@ -209,4 +209,4 @@ let sortContact = function(contacts, sortBy){
 }
 
 let sortBy = prompt("Sort by? ");
-sortContact(contacts, sortBy);
+sortContact(contacts1, sortBy);
